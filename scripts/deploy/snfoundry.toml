@@ -1,0 +1,4 @@
+[sncast.sepolia]
+account = "sepolia_admin.json"
+keystore = "sepolia_admin_keystore.json"
+url = "https://starknet-sepolia.public.blastapi.io/rpc/v0_7"

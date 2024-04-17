@@ -1,0 +1,1 @@
+pub const MAX_FEE: felt252 = 9999999999999999;

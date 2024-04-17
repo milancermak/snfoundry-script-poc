@@ -1,0 +1,26 @@
+[package]
+name = "deploy"
+version = "0.1.0"
+edition = "2023_11"
+
+[lib]
+sierra = true
+casm = true
+
+[dependencies]
+starknet = ">=2.6.3"
+sncast_std = { git = "https://github.com/foundry-rs/starknet-foundry", tag = "v0.21.0" }
+poc = { path = "../../" }
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
+build-external-contracts = [
+    "poc::token::blobby"
+]
+
+[profile.sepolia]
+inherits = "release"
+
+[scripts]
+dep = "sncast --profile sepolia script run deploy"
