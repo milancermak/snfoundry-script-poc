@@ -24,6 +24,6 @@ mod blobby {
 
     #[constructor]
     fn constructor(ref self: ContractState) {
-        self.erc20.initializer("Blobby", "BLOB");
+        self.erc20.initializer("Blobby 1", "BLOB");
     }
 }
